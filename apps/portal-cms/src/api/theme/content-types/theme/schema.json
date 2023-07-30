@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "themes",
+  "info": {
+    "singularName": "theme",
+    "pluralName": "themes",
+    "displayName": "Theme"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "themeName": {
+      "type": "uid"
+    },
+    "primaryColor": {
+      "type": "string"
+    }
+  }
+}

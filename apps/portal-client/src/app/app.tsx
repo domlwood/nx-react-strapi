@@ -1,12 +1,9 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
-
-import NxWelcome from './nx-welcome';
+import { SideBar } from '@portal/components';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="portal-client" />
+      <SideBar />
     </div>
   );
 }
