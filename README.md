@@ -1,4 +1,4 @@
-# ✨ Demo Portal ✨
+# ✨ React & Strapi NX Monorepo ✨
 
 **This application is built with [React (Vite)](https://vitejs.dev/) & [Strapi (V4)](https://strapi.io/) using [Nx](https://nx.dev) on [Node18]**
 
