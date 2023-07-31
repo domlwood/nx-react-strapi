@@ -4,7 +4,8 @@
   "info": {
     "singularName": "theme",
     "pluralName": "themes",
-    "displayName": "Theme"
+    "displayName": "Theme",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,8 +14,20 @@
     "themeName": {
       "type": "uid"
     },
+    "secondaryColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
     "primaryColor": {
-      "type": "string"
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "accentColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
     }
   }
 }

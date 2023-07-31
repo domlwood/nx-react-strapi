@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apps",
+  "info": {
+    "singularName": "app",
+    "pluralName": "apps",
+    "displayName": "App",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "apps"
+    },
+    "companies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::company.company",
+      "mappedBy": "apps"
+    }
+  }
+}

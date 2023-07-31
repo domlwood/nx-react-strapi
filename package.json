@@ -2,11 +2,14 @@
   "name": "@portal/source",
   "version": "0.0.0",
   "license": "MIT",
-  "workspaces": ["apps/**"],
+  "workspaces": [
+    "apps/**"
+  ],
   "scripts": {
     "client": "nx serve portal-client",
-    "db": "docker-compose --env-file ./apps/portal-cms/.env -f docker-compose.yml up",
-    "init": "cd apps/portal-cms && cp .env.example .env",
+    "db": "docker-compose --env-file .env -f docker-compose.yml up",
+    "init": "cp .env.example .env",
+    "lint": "nx lint portal-client",
     "server": "concurrently \"npm run db\" \"nx serve portal-cms\"",
     "start": "concurrently \"npm run client\" \"npm run server\"",
     "test": "npx nx run-many --all --target=test --watch --skip-nx-cache"
@@ -42,6 +45,7 @@
     "@vitejs/plugin-react": "~4.0.0",
     "@vitest/coverage-c8": "~0.32.0",
     "@vitest/ui": "~0.32.0",
+    "autoprefixer": "^10.4.14",
     "babel-jest": "^29.4.1",
     "cypress": "^12.16.0",
     "eslint": "~8.15.0",
@@ -55,8 +59,10 @@
     "jest-environment-jsdom": "^29.4.1",
     "jsdom": "~22.1.0",
     "nx": "16.5.5",
+    "postcss": "^8.4.27",
     "prettier": "^2.6.2",
     "sass": "^1.55.0",
+    "tailwindcss": "^3.3.3",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "typescript": "~5.1.3",
