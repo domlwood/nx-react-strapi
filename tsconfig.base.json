@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@portal/components": ["libs/components/src/index.ts"],
-      "@portal/models": ["libs/models/src/index.ts"]
+      "@portal/models": ["libs/models/src/index.ts"],
+      "@portal/services": ["libs/services/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -10,7 +10,7 @@
     "db": "docker-compose --env-file .env -f docker-compose.yml up",
     "init": "cp .env.example .env",
     "lint": "nx lint portal-client",
-    "server": "concurrently \"npm run db\" \"nx serve portal-cms\"",
+    "server": "concurrently \"npm run db\" \"nx build portal-cms && nx serve portal-cms\"",
     "start": "concurrently \"npm run client\" \"npm run server\"",
     "test": "npx nx run-many --all --target=test --watch --skip-nx-cache"
   },

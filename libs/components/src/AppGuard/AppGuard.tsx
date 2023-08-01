@@ -6,7 +6,7 @@ import { useAppContext } from '../AppContext/AppContext';
 
 export const AppGuard = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(false);
 
   const { setTheme } = useAppContext();
 
